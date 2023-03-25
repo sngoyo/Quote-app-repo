@@ -13,13 +13,40 @@
                         width: 35rem;
                         background-color: white;
                         border-radius: 6px;
+                        animation: min-max-transition 2s ease-in-out;
+                        transition: min-height 2s ease-in-out;
+                    }
+                    
+                    @keyframes min-max-transition {
+                        0% {
+                            min-height: 0px;
+                        }
+                        25% {
+                            min-height: 50px;
+                        }
+                        50% {
+                            min-height: 75px;
+                        }
+                        75% {
+                            min-height: 100px;
+                        }
+                        100% {
+                            min-height: 230px;
+                        }
+                    }
+                    
+                    .quote-content {
+                        padding-left: 30px;
+                        text-align: center;
+                        text-justify: auto;
                     }
                     
                     #text {
                         color: black;
                         text-align: center;
                         padding-top: 30px;
-                        padding-right: 50px
+                        padding-right: 50px;
+                        transition: all 2s;
                     }
                     
                     #author {
@@ -29,6 +56,7 @@
                         padding-bottom: 10rem;
                         font-size: 16px;
                         font-weight: normal;
+                        padding-right: 25px;
                     }
                     
                     #new-quote {
@@ -40,6 +68,7 @@
                         border: none;
                         margin-right: 45px;
                         z-index: 2;
+                        transition: background-color 2s;
                     }
                     
                     button:hover {
@@ -75,6 +104,7 @@
                         border-radius: 3px;
                         font-size: 1.0rem;
                         color: white;
+                        transition: background-color 2s;
                     }
                     
                     .tumblr-icon {
@@ -87,12 +117,13 @@
                         border-radius: 3px;
                         font-size: 1.0rem;
                         color: white;
+                        transition: background-color 2s;
                     }
                     
                     .quote-icon {
                         font-size: 2rem;
                         padding-right: 10px;
-                        padding-left: 44.8px;
+                        padding-left: 30px;
                     }
                     
                     .mtunzi {
@@ -105,14 +136,5 @@
                     
                     body {
                         color: black;
-                        animation: slowchange 0.4s ease-out forwards;
-                    }
-                    
-                    @keyframes slowchange {
-                        0% {
-                            transform: translateY(-100%);
-                        }
-                        100% {
-                            transform: translateY(0);
-                        }
+                        transition: background-color 2s;
                     }
